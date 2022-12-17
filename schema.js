@@ -16,10 +16,12 @@ const userSchema = new mongoose.Schema({
         type : String,
         required : true
     },
-    status :{
-        type : Boolean,
-        required : true
-    }
+    selectedItems:[{
+        type: String,
+        required: false
+    }]
+        
+   
 })
 
 const Customer = new mongoose.model("Customer",userSchema);
